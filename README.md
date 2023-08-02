@@ -1,2 +1,2 @@
-# x-da-questao
+# XdaQuestão
 Studying website to help students prepare for academic olympiads
