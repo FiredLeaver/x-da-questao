@@ -11,15 +11,19 @@
 <body>
 <div class="topnav">
     <span style="font-size:30px;cursor:pointer" onclick="toogleNav()">&#9776;</span>
-    <input type="text" placeholder="Search">
-    <a href="#">Profile</a>
+    <div class="searchBar">
+        <img class="icon" id="searchBarIcon" src="images/search.png">
+        <input type="text" placeholder="Search">
+    </div>
+    <img class="icon" src="images/account.png" alt="">
+    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Obmep</a>
+    </div>
 </div> 
 
 
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">Obmep</a>
-</div>
 
 
 </body>
