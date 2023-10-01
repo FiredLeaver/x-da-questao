@@ -27,15 +27,15 @@ const loginForms =
 <div class="inputFields">
 <div class="inputField">
     <div class="icon"><img src="images/account.png" alt="icone"></div>
-    <input type="text" placeholder="Nome de usuário ou E-mail">
+    <input name="login" type="text" placeholder="Nome de usuário ou E-mail">
     </div>
     <div class="inputField">
     <div class="icon"><img src="images/lock.png" alt="icone"></div>
-    <input type="password" placeholder="Senha">
+    <input name="password" type="password" placeholder="Senha">
     <span class="link">Esqueci a senha</span>
 </div>
 </div>     
-<button class="btnfield">Entrar</button>
+<input type="submit" name="acao" value="Logar" />
 `
 const signUpForms =
 `
