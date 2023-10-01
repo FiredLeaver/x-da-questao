@@ -6,8 +6,8 @@ var path = require('path')
 const app = express()
 const PORT = 8080
 
-var login = "a"
-var password = "1"
+var login = "username"
+var password = "password"
 
 app.use(session({secret:'sidnaso3f88nofn'}))
 app.use(bodyParser.urlencoded({extended:true}))
