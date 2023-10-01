@@ -34,9 +34,10 @@ const loginForms =
     <input name="password" type="password" placeholder="Senha">
     <span class="link">Esqueci a senha</span>
 </div>
-</div>     
-<input type="submit" name="acao" value="Logar" />
+</div>
+<button name="acao" class="btnfield">Entrar</button>
 `
+
 const signUpForms =
 `
 <div class="inputFields">
