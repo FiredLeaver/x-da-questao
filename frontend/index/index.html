@@ -9,22 +9,26 @@
     <script src="index.js"></script>
 </head>
 <body>
-<div class="topnav">
-    <span style="font-size:30px;cursor:pointer" onclick="toogleNav()">&#9776;</span>
-    <div class="searchBar">
-        <img class="icon" id="searchBarIcon" src="images/search.png">
-        <input type="text" placeholder="Search">
+    <div class="topnav">
+        <!--Side navigation bar-->
+        <span style="font-size:30px;cursor:pointer" onclick="toogleNav()">&#9776;</span>
+        <div class="searchBar">
+            <img class="icon" id="searchBarIcon" src="images/search.png">
+            <input type="text" placeholder="Search">
+        </div>
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Obmep</a>
+        </div>
+        
+        
+        <img id="account" class="icon" src="images/account.png" alt="account" onclick="toogleAccountPopUp()">
+    </div> 
+    <div id="account-popup">        
+        <a href="#">Account</a>
+        <a href="#">Statistics</a>
+        <a href="#">Exit</a>
     </div>
-    <img class="icon" src="images/account.png" alt="">
-    
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Obmep</a>
-    </div>
-</div> 
-
-
-
-
 </body>
 </html>
