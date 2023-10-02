@@ -24,7 +24,43 @@
         </div>
 
         <form action="/enviar" method="post" id="loginForms">
-            
+            <!-- Login forms -->
+            <div class="login-forms forms">
+                <div class="inputFields">
+                    <div class="inputField">
+                        <div class="icon"><img src="images/account.png" alt="icone"></div>
+                        <input name="login" type="text" placeholder="Nome de usuário ou E-mail">
+                    </div>
+                    <div class="inputField">
+                        <div class="icon"><img src="images/lock.png" alt="icone"></div>
+                        <input name="password" type="password" placeholder="Senha">
+                        <span class="link">Esqueci a senha</span>
+                    </div>
+                </div>
+                <button type="submit" name="acao" class="btnfield">Entrar</button>
+            </div>
+            <!-- SignUp forms -->
+            <div class="signUp-forms forms">
+                <div class="inputFields">
+                    <div class="inputField">
+                        <div class="icon"><img src="images/account.png" alt="icone"></div>
+                        <input name="user" type="text" placeholder="Nome de usuário">
+                    </div>
+                    <div class="inputField">
+                        <div class="icon"><img src="images/mail.png" alt="icone"></div>
+                        <input name="email" type="email" placeholder="E-mail">
+                    </div>
+                    <div class="inputField">
+                        <div class="icon"><img src="images/lock.png" alt="icone"></div>
+                        <input name="password" type="password" placeholder="Senha">
+                    </div>
+                    <div class="inputField">
+                        <div class="icon"><img src="images/lock.png" alt="icone"></div>
+                        <input type="password" placeholder="Confirmar Senha">
+                    </div>
+                </div>
+                <button type="submit" name="acao" class="btnfield">Cadastrar</button>
+            </div>
         </form>
     </main>
 

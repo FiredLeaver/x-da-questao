@@ -69,6 +69,10 @@ form{
     flex-direction: column;
 }
 
+.hidden {
+    display: none;
+}
+
 input{
     font-size: 20px;
     padding: 0;
@@ -107,6 +111,7 @@ input{
 }
 
 .btnfield{
+    display: block;
     position: relative;
     margin: 0 auto;
     margin-top: 30px;
@@ -119,7 +124,6 @@ input{
 
     -webkit-box-shadow: 9px 10px 0px -3px var(--cor-secundaria);
     -moz-box-shadow: 9px 10px 0px -3px var(--cor-secundaria);
-
 }
 
 .inputFields{

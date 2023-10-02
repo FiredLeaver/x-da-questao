@@ -2,14 +2,17 @@ const loginArea = document.getElementById("entrar")
 const signArea = document.getElementById("cadastrar")
 let areaAtivada = loginArea
 
+const loginForms = document.querySelector(".login-forms")
+const signUpForms = document.querySelector(".signUp-forms")
+
 loginArea.addEventListener("click", function(mouse) {
     changeSelectedArea(mouse)
-    changeForms(loginForms)
+    changeForms("login")
 })
 
 signArea.addEventListener("click", function(mouse) {
     changeSelectedArea(mouse)
-    changeForms(signUpForms)
+    changeForms("signUp")
 })
 
 function changeSelectedArea(area){
@@ -22,51 +25,14 @@ function changeSelectedArea(area){
     areaAtivada.classList.add("Ativado")
 }
 
-const loginForms = 
-`
-<div class="inputFields">
-<div class="inputField">
-    <div class="icon"><img src="images/account.png" alt="icone"></div>
-    <input name="login" type="text" placeholder="Nome de usuário ou E-mail">
-    </div>
-    <div class="inputField">
-    <div class="icon"><img src="images/lock.png" alt="icone"></div>
-    <input name="password" type="password" placeholder="Senha">
-    <span class="link">Esqueci a senha</span>
-</div>
-</div>
-<button name="acao" class="btnfield">Entrar</button>
-`
-
-const signUpForms =
-`
-<div class="inputFields">
-<div class="inputField">
-    <div class="icon"><img src="images/account.png" alt="icone"></div>
-    <input type="text" placeholder="Nome de usuário">
-    </div>
-    <div class="inputField">
-    <div class="icon"><img src="images/mail.png" alt="icone"></div>
-    <input type="email" placeholder="E-mail">
-    </div>
-    <div class="inputField">
-    <div class="icon"><img src="images/lock.png" alt="icone"></div>
-    <input type="password" placeholder="Senha">
-    </div>
-    <div class="inputField">
-    <div class="icon"><img src="images/lock.png" alt="icone"></div>
-    <input type="password" placeholder="Confirmar Senha">
-</div>
-</div>
-<button class="btnfield">Cadastrar</button>
-`
-
-
-
 const forms = document.getElementById("loginForms")
 
-function changeForms(currentForms){
-    forms.innerHTML = currentForms
+function changeForms(forms) {
+    loginForms.classList.add("hidden")
+    signUpForms.classList.add("hidden")
+
+    if (forms === "login") loginForms.classList.remove("hidden")
+    else if (forms === "signUp") signUpForms.classList.remove("hidden")
 }
 
-changeForms(loginForms)
+changeForms("signUp")
