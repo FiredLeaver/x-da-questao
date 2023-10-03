@@ -13,56 +13,70 @@
     </header>
 
     <main>
-        <div id="entrar-cadastrar">
-            <span id="entrar" class="Ativado">
+        <div id="tabs">
+            <span id="login-tab" class="activated">
                 Entrar
             </span>
 
-            <span id="cadastrar">
+            <span id="signUp-tab">
                 Cadastrar-se
             </span>
         </div>
 
-        <form action="/enviar" method="post" id="loginForms">
-            <!-- Login forms -->
-            <div class="login-forms forms">
-                <div class="inputFields">
-                    <div class="inputField">
-                        <div class="icon"><img src="images/account.png" alt="icone"></div>
-                        <input name="login" type="text" placeholder="Nome de usuário ou E-mail">
-                    </div>
-                    <div class="inputField">
-                        <div class="icon"><img src="images/lock.png" alt="icone"></div>
-                        <input name="password" type="password" placeholder="Senha">
-                        <span class="link">Esqueci a senha</span>
-                    </div>
+        <!-- Login forms -->
+        <form action="/login" method="post" id="login-forms">
+            <div class="inputFields">
+                <div class="inputField">
+                    <div class="icon"><img src="images/account.png" alt="icone"></div>
+                    <input name="login" type="text" placeholder="Nome de usuário ou E-mail">
                 </div>
-                <button type="submit" name="acao" class="btnfield">Entrar</button>
-            </div>
-            <!-- SignUp forms -->
-            <div class="signUp-forms forms">
-                <div class="inputFields">
-                    <div class="inputField">
-                        <div class="icon"><img src="images/account.png" alt="icone"></div>
-                        <input name="user" type="text" placeholder="Nome de usuário">
-                    </div>
-                    <div class="inputField">
-                        <div class="icon"><img src="images/mail.png" alt="icone"></div>
-                        <input name="email" type="email" placeholder="E-mail">
-                    </div>
-                    <div class="inputField">
-                        <div class="icon"><img src="images/lock.png" alt="icone"></div>
-                        <input name="password" type="password" placeholder="Senha">
-                    </div>
-                    <div class="inputField">
-                        <div class="icon"><img src="images/lock.png" alt="icone"></div>
-                        <input type="password" placeholder="Confirmar Senha">
-                    </div>
+                <div class="inputField">
+                    <div class="icon"><img src="images/lock.png" alt="icone"></div>
+                    <input name="password" type="password" placeholder="Senha">
+                    <span id="forgotPassword" class="link">Esqueci a senha</span>
                 </div>
-                <button type="submit" name="acao" class="btnfield">Cadastrar</button>
             </div>
+            <button type="submit" name="acao" class="btnfield">Entrar</button>
+        </form>
+
+        <!-- SignUp forms -->
+        <form action="/signup" method="post" class="hidden" id="signUp-forms">
+            <div class="inputFields">
+                <div class="inputField">
+                    <div class="icon"><img src="images/account.png" alt="icone"></div>
+                    <input name="user" type="text" placeholder="Nome de usuário">
+                </div>
+                <div class="inputField">
+                    <div class="icon"><img src="images/mail.png" alt="icone"></div>
+                    <input name="email" type="email" placeholder="E-mail">
+                </div>
+                <div class="inputField">
+                    <div class="icon"><img src="images/lock.png" alt="icone"></div>
+                    <input name="password" type="password" placeholder="Senha">
+                </div>
+                <div class="inputField">
+                    <div class="icon"><img src="images/lock.png" alt="icone"></div>
+                    <input type="password" placeholder="Confirmar senha">
+                </div>
+            </div>
+            <button type="submit" name="acao" class="btnfield">Cadastrar</button>
+        </form>
+
+        <!-- Forgot password forms -->
+        <form action="/forgotPassword" method="post" class="hidden" id="forgotPassword-forms">
+            <div class="inputFields">
+                <button type="button" class="btn-return" id="btn-return-login">
+                    <img src="images/returnArrow.png" alt="icone">
+                    <span class="">Voltar</span>
+                </button>
+                <div class="inputField">
+                    <div class="icon"><img src="images/account.png" alt="icone"></div>
+                    <input name="login" type="text" placeholder="Nome de usuário ou E-mail">
+                </div>
+            </div>
+
+            <button type="submit" name="acao" class="btnfield">Solicitar código</button>
         </form>
     </main>
-
 </body>
 </html>

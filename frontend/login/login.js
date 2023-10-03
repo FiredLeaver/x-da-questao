@@ -1,38 +1,41 @@
-const loginArea = document.getElementById("entrar")
-const signArea = document.getElementById("cadastrar")
-let areaAtivada = loginArea
+const loginTab = document.getElementById('login-tab')
+const signTab = document.getElementById('signUp-tab')
+let activatedTab = loginTab
 
-const loginForms = document.querySelector(".login-forms")
-const signUpForms = document.querySelector(".signUp-forms")
+const btnReturnLogin = document.getElementById('btn-return-login')
+const forgotPassword = document.getElementById('forgotPassword')
 
-loginArea.addEventListener("click", function(mouse) {
-    changeSelectedArea(mouse)
-    changeForms("login")
+const loginForms = document.getElementById('login-forms')
+const signUpForms = document.getElementById('signUp-forms')
+const forgotPasswordForms = document.getElementById('forgotPassword-forms')
+let activatedForms = loginForms
+
+loginTab.addEventListener('click', function() {
+    changeSelectedTab(loginTab)
+    changeForms(loginForms)
 })
 
-signArea.addEventListener("click", function(mouse) {
-    changeSelectedArea(mouse)
-    changeForms("signUp")
+signTab.addEventListener('click', function() {
+    changeSelectedTab(signTab)
+    changeForms(signUpForms)
 })
 
-function changeSelectedArea(area){
+btnReturnLogin.addEventListener('click', function() {
+    changeForms(loginForms)
+})
 
-    areaAtivada.classList.remove("Ativado")
-    areaAtivada = area.target
+forgotPassword.addEventListener('click', function() {
+    changeForms(forgotPasswordForms)
+})
 
-    console.log(areaAtivada)
-
-    areaAtivada.classList.add("Ativado")
+function changeSelectedTab(tab) {
+    activatedTab.classList.remove('activated')
+    activatedTab = tab
+    activatedTab.classList.add('activated')
 }
-
-const forms = document.getElementById("loginForms")
 
 function changeForms(forms) {
-    loginForms.classList.add("hidden")
-    signUpForms.classList.add("hidden")
-
-    if (forms === "login") loginForms.classList.remove("hidden")
-    else if (forms === "signUp") signUpForms.classList.remove("hidden")
+    activatedForms.classList.add('hidden')
+    activatedForms = forms
+    activatedForms.classList.remove('hidden')
 }
-
-changeForms("signUp")

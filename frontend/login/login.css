@@ -1,4 +1,4 @@
-:root{
+:root {
     --cor-primaria: #d9d9d9;
     --cor-secundaria: #a6a6a8;
 }
@@ -10,11 +10,16 @@
     box-sizing: border-box;
 }
 
-img{
+button {
+    cursor: pointer;
+    border: none;
+}
+
+img {
     user-select: none;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
@@ -25,23 +30,27 @@ body{
     background-size: cover;
 }
 
-main{
+main {
     background-color: var(--cor-primaria);
     width: 500px;
     height: 500px;
     color: black;
 }
 
-#entrar-cadastrar{
-    display: flex;
-    
+#logo {
+    height: 150px;
+    margin-bottom: 20px;
 }
 
-#entrar.Ativado, #cadastrar.Ativado{
+#tabs {
+    display: flex;
+}
+
+#login-tab.activated, #signUp-tab.activated {
     background-color: var(--cor-primaria);
 }
 
-#entrar, #cadastrar{
+#login-tab, #signUp-tab {
     transition: .2s;
     cursor: pointer;
     user-select: none;
@@ -51,19 +60,12 @@ main{
     text-align: center;
 
     padding: 10px 0px;
-    /*background-color: var(--cor-primaria);*/
-    background-color: white;
     background-color: var(--cor-secundaria);
 
     font-size: 2rem;
 }
 
-.link{
-    color: blue;
-    text-decoration: underline;
-}
-
-form{
+form {
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -73,7 +75,48 @@ form{
     display: none;
 }
 
-input{
+.inputFields {
+    height: 300px;
+}
+
+.inputField {
+    position: relative;
+    margin-left: 30px;
+    margin-top: 20px;
+    background-color: white;
+    height: 50px;
+    width: 450px;
+    border-radius: 30px;
+}
+
+.btn-return {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 30px;
+    width: 100px;
+    padding: 6px 10px;
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+.icon {
+    left: -5px;
+    position: absolute;
+    display: inline-block;
+    border-radius: 30px;
+    width: 60px;
+    height: 100%;
+    background-color: var(--cor-secundaria);
+}
+
+.icon img {
+    padding: 9px 0;
+    margin: 0 auto;
+    display: block;
+}
+
+input {
     font-size: 20px;
     padding: 0;
     height: 100%;
@@ -84,33 +127,15 @@ input{
     outline: none;
 }
 
-.inputField{
-    position: relative;
-    margin-left: 30px;
-    margin-top: 20px;
-    background-color: white;
-    height: 50px;
-    width: 450px;
-    border-radius: 30px;
-}
-
-.icon{
-    left: -5px;
-    position: absolute;
-    display: inline-block;
-    border-radius: 30px;
-    width: 60px;
-    height: 100%;
-    background-color: var(--cor-secundaria);
-}
-
-.icon img{
-    padding: 9px 0;
-    margin: 0 auto;
+.link {
     display: block;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-.btnfield{
+.btnfield {
     display: block;
     position: relative;
     margin: 0 auto;
@@ -126,27 +151,22 @@ input{
     -moz-box-shadow: 9px 10px 0px -3px var(--cor-secundaria);
 }
 
-.inputFields{
-    height: 300px;
-}
-
-.btnfield::before{
+.btnfield::before {
     content: "";
     position: absolute;
-    width: 5px;
+    width: 10px;
     height: 100%;
     background-color: white;
     top: 0;
     left: 0;
-
 }
-.btnfield::after{
+
+.btnfield::after {
     content: "";
     position: absolute;
     width: 100%;
-    height: 5px;
+    height: 10px;
     background-color: white;
     top: 0;
     left: 0;
-
 }

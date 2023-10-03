@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, '../','/frontend','/login')))
 app.set('views', path.join(__dirname, '../','/frontend','/login'))
 
 
-app.post("/enviar",(req,res) =>{
+app.post("/login",(req,res) =>{
     if (req.body.password === password && req.body.login === login) {
         req.session.login = login
         res.render('logado')
