@@ -13,22 +13,39 @@
         <!--Side navigation bar-->
         <span style="font-size:30px;cursor:pointer" onclick="toogleNav()">&#9776;</span>
         <div class="searchBar">
-            <img class="icon" id="searchBarIcon" src="images/search.png">
+            <img id="searchBarIcon" src="images/search.png">
             <input type="text" placeholder="Search">
         </div>
         
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#">Obmep</a>
+            <a href="#">Enem</a>
+            <a href="#">Instituto Federal</a>
         </div>
         
         
-        <img id="account" class="icon" src="images/account.png" alt="account" onclick="toogleAccountPopUp()">
+        <img id="account" src="images/account.png" alt="account" onclick="toogleAccountPopUp()">
     </div> 
     <div id="account-popup">        
         <a href="#">Account</a>
         <a href="#">Statistics</a>
         <a href="#">Exit</a>
+    </div>
+
+    <div class="container">
+        <div class="select-icon-background">
+            <img class="select-icon" src="images/obmep.png" alt="obmep" draggable="false">
+            <span>OBMEP</span>
+        </div>
+        <div class="select-icon-background">
+            <img class="select-icon" src="images/enem.png" alt="obmep" draggable="false">
+            <span>ENEM</span>
+        </div>
+        <div class="select-icon-background">
+            <img class="select-icon" src="images/ifsp.png" alt="obmep" draggable="false">
+            <span>INSTITUTO FEDERAL</span>
+        </div>
     </div>
 </body>
 </html>

@@ -5,14 +5,17 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: whitesmoke;
+img{
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
-img {
-  user-select: none;
-  -webkit-user-drag: none;
+body {
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
 }
 
 .topnav {
@@ -34,9 +37,6 @@ img {
   border-radius: 30px;
 }
 
-.icon {
-  height: 32px;
-}
 
 #account {
   cursor: pointer;
@@ -127,3 +127,34 @@ img {
   .sidenav a {font-size: 18px;}
 }
 /*#endregion*/
+
+.container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 100px;
+}
+
+.select-icon-background{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 10px;
+
+  height: 200px;
+  width: 200px;
+  background-color: transparent;
+
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.select-icon-background:hover{
+  background-color: #d0e3e7;
+}
+
+.select-icon-background span{
+  user-select: none;
+}
