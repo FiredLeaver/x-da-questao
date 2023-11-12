@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XdaQuestao</title>
+    <link rel="stylesheet" href="../global/topbar.css">
+    <script defer src="../global/topbar.js"></script>
+
+    <style>
+        .question-container {
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            border: solid black 1px;
+            padding: 20px;
+        }
+
+        .question {
+            font-size: 30px;
+        }
+
+        .answers {
+            margin-left: 20px;
+        }
+
+        .answer {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+
+        .answer:hover {
+            background-color: rgb(218, 218, 218)
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="lateral-menu-container">
+            <span class="burger-menu">&#9776;</span>
+
+            <nav class="lateral-menu">
+                <span class="close">&times;</span>
+
+                <ul class="tests-container">
+                    <li>
+                        <a class="test" href="#">
+                            <img class="test-icon" src="./global/images/obmep.png" alt="obmep icon">
+                            Obmep
+                        </a>
+                    </li>
+                    <li>
+                        <a class="test" href="#">
+                            <img class="test-icon" src="../global/images/enem.png" alt="enem icon">
+                            Enem
+                        </a>
+                    </li>
+                    <li>
+                        <a class="test" href="#">
+                            <img class="test-icon" src="../global/images/ifsp.png" alt="ifsp icon">
+                            Instituto Federal
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="search-bar">
+            <img class="search-icon" src="../global/images/search.png" alt="search icon">
+            <input class="search-input" type="text" placeholder="Search">
+        </div>
+
+        <div class="user-container">
+            <img id="user" src="../global/images/account.png" alt="account icon">
+
+            <nav class="account hidden">
+                <ul>
+                    <li><a class="account-item" href="#">Account</a></li>
+                    <li><a class="account-item" href="#">Statistics</a></li>
+                    <li><a class="account-item exit" href="#">Exit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 style="text-align: center;">
+            <%= test %>
+        </h1>
+
+        <div class="questions">
+            <% for (const question of questions) { %>
+                <div class="question-container">
+                    <div class="question">
+                        <%= question.question %> 
+                    </div>
+
+                    <ul class="answers">
+                        <% for (const answer in question.answers) { %>
+                            <li class="answer">
+                                <%= answer %> - <%= question.answers[answer] %> 
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>

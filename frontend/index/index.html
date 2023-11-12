@@ -5,47 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XdaQuestao</title>
-    <link rel="stylesheet" href="index.css">
-    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="./index/index.css">
+    <link rel="stylesheet" href="./global/topbar.css">
+    <script defer src="./global/topbar.js"></script>
+    <script defer src="./index/index.js"></script>
 </head>
 <body>
-    <div class="topnav">
-        <!--Side navigation bar-->
-        <span style="font-size:30px;cursor:pointer" onclick="toogleNav()">&#9776;</span>
-        <div class="searchBar">
-            <img id="searchBarIcon" src="images/search.png">
-            <input type="text" placeholder="Search">
-        </div>
-        
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Obmep</a>
-            <a href="#">Enem</a>
-            <a href="#">Instituto Federal</a>
-        </div>
-        
-        
-        <img id="account" src="images/account.png" alt="account" onclick="toogleAccountPopUp()">
-    </div> 
-    <div id="account-popup">        
-        <a href="#">Account</a>
-        <a href="#">Statistics</a>
-        <a href="#">Exit</a>
-    </div>
+    <header class="header">
+        <div class="lateral-menu-container">
+            <span class="burger-menu">&#9776;</span>
 
-    <div class="container">
-        <div class="select-icon-background">
-            <img class="select-icon" src="images/obmep.png" alt="obmep" draggable="false">
-            <span>OBMEP</span>
+            <nav class="lateral-menu">
+                <span class="close">&times;</span>
+
+                <ul class="tests-container">
+                    <li>
+                        <a class="test" href="./exams">
+                            <img class="test-icon exam" data-test="obmep" src="./global/images/obmep.png" alt="obmep icon">
+                            Obmep
+                        </a>
+                    </li>
+                    <li>
+                        <a class="test" href="./exams">
+                            <img class="test-icon exam" data-test="enem" src="./global/images/enem.png" alt="enem icon">
+                            Enem
+                        </a>
+                    </li>
+                    <li>
+                        <a class="test" href="./exams">
+                            <img class="test-icon exam" data-test="ifsp" src="./global/images/ifsp.png" alt="ifsp icon">
+                            Instituto Federal
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <div class="select-icon-background">
-            <img class="select-icon" src="images/enem.png" alt="obmep" draggable="false">
-            <span>ENEM</span>
+
+        <div class="search-bar">
+            <img class="search-icon" src="./global/images/search.png" alt="search icon">
+            <input class="search-input" type="text" placeholder="Search">
         </div>
-        <div class="select-icon-background">
-            <img class="select-icon" src="images/ifsp.png" alt="obmep" draggable="false">
-            <span>INSTITUTO FEDERAL</span>
+
+        <div class="user-container">
+            <img id="user" src="./global/images/account.png" alt="account icon">
+
+            <nav class="account hidden">
+                <ul>
+                    <li><a class="account-item" href="#">Account</a></li>
+                    <li><a class="account-item" href="#">Statistics</a></li>
+                    <li><a class="account-item exit" href="#">Exit</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+
+    <main>
+        <ul class="tests-row">
+            <li>
+                <a href="./exams">
+                    <img class="test-big-icon exam" data-test="obmep" src="./global/images/obmep.png" alt="obmep icon">
+                </a>
+            </li>
+            <li>
+                <a href="./exams">
+                    <img class="test-big-icon exam" data-test="enem" src="./global/images/enem.png" alt="enem icon">
+                </a>
+            </li>
+            <li>
+                <a href="./exams">
+                    <img class="test-big-icon exam" data-test="ifsp" src="./global/images/ifsp.png" alt="ifsp icon">
+                </a>
+            </li>
+        </ul>
+    </main>
 </body>
-</html>

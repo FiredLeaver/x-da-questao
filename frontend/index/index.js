@@ -1,35 +1,15 @@
-function toogleNav() {
-    if (document.getElementById("mySidenav").style.width == "250px") {
-      closeNav();
-  }
-    else{
-      openNav();
-  }
-}
+const exams = document.querySelectorAll('.exam')
 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-  
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
-
-function toogleAccountPopUp(){
-  console.log("yeey")
-  if (document.getElementById("account-popup").style.display == "flex") {
-    closeAccountPopUp();
-  }
-  else{
-    openAccountPopUp();
-  }
-}
-
-function openAccountPopUp(){
-  document.getElementById("account-popup").style.display = "flex";
-}
-
-function closeAccountPopUp(){
-  document.getElementById("account-popup").style.display = "none";
-}
+exams.forEach(exam => {
+    exam.addEventListener('click', _ => {
+        fetch('http://localhost:8080/exams', {
+            method: 'POST',
+            body: JSON.stringify({
+                test: exam.getAttribute('data-test')
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        })
+    })
+})

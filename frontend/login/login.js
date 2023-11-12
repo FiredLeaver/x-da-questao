@@ -1,15 +1,19 @@
+// tabs
 const loginTab = document.getElementById('login-tab')
 const signTab = document.getElementById('signUp-tab')
 let activatedTab = loginTab
 
+// buttons
 const btnReturnLogin = document.getElementById('btn-return-login')
 const forgotPassword = document.getElementById('forgotPassword')
 
+// forms
 const loginForms = document.getElementById('login-forms')
 const signUpForms = document.getElementById('signUp-forms')
 const forgotPasswordForms = document.getElementById('forgotPassword-forms')
 let activatedForms = loginForms
 
+// change forms
 loginTab.addEventListener('click', function() {
     changeSelectedTab(loginTab)
     changeForms(loginForms)
